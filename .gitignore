@@ -1,0 +1,11 @@
+__pycache__/
+.ipynb_checkpoints/
+results/
+onnx_models/
+.idea/
+*.pyc
+*.egg-info
+*.onnx
+*.log
+.vscode/
+
