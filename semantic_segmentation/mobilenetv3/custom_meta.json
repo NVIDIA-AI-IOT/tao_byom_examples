@@ -1,0 +1,14 @@
+{
+    "TOP_DIR": "mobilenetv3",
+    "ABS_TOP_DIR": "/home/rtx/workspace/sean/tao-byom-example/semantic_segmentation/mobilenetv3",
+    "FILE_NAMES": {
+        "conversion": "user_generated_layer.py",
+        "custom_layer": "hard_sigmoid.py"
+    },
+    "ONNX_NODES": {
+        "HardSigmoid": "convert_hard_sigmoid"
+    },
+    "CUSTOM_OBJS": {
+        "HardSigmoidLayer": "HardSigmoidLayer"
+    }
+}

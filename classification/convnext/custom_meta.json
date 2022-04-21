@@ -1,0 +1,15 @@
+{
+    "TOP_DIR": "convnext",
+    "ABS_TOP_DIR": "/home/rtx/workspace/sean/tao-byom-example/classification/convnext",
+    "FILE_NAMES": {
+        "conversion": "user_generated_layer.py",
+        "custom_layer": "erf.py"
+    },
+    "ONNX_NODES": {
+        "Erf": "convert_erf",
+        "ReduceProd": "convert_reduce_prod"
+    },
+    "CUSTOM_OBJS": {
+        "ERFLayer": "ERFLayer"
+    }
+}
