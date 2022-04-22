@@ -102,7 +102,7 @@ def main(args=None):
     model_name = args.model_name
 
     print("Model Name: ", model_name)
-    pretrained = 'scratch' in model_name
+    pretrained = 'scratch' not in model_name
     if pretrained and (args.pretrained_path is None or not os.path.exists(args.pretrained_path)):
         raise FileNotFoundError("Requires pretrained model weight")
 

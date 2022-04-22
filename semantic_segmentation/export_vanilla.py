@@ -67,7 +67,7 @@ def main(args=None):
     model_name = args.model_name
 
     print("Model Name: ", model_name)
-    pretrained = 'scratch' in model_name
+    pretrained = 'scratch' not in model_name
 
     opset = args.opset_version
 

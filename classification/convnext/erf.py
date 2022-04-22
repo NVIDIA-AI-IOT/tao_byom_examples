@@ -32,8 +32,9 @@ class ERFLayer(keras.layers.Layer):
     ERF in ONNX computes error function of the given input tensor elementwise.
     There's no Keras operations for ERF so we need to use `tf.math`.
     """
-    def __init__(self):
+    def __init__(self, **kwargs):
         """Init."""
+        super().__init__(**kwargs)
 
     def call(self, inputs):
         """ERF"""
