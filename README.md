@@ -96,8 +96,8 @@ Below is a list of considerations before using TAO BYOM.
 3. Dynamic input shape is not supported. You must export the ONNX model using the same input shape you will use in TAO Toolkit spec file.
 
 ## Run BYOM Model through TAO Toolkit
-The end-to-end pipeline for running BYOM EfficientNet-B3 on the Pascal VOC dataset is shown in [this notebok](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/resources/cv_samples/files), and ResNet18-UNet on the DAGM dataset is shown
-in [this notebok](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/resources/cv_samples/files).
+The end-to-end pipeline for running BYOM ResNet18 classification model on the Pascal VOC dataset is shown in [this notebok](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/resources/cv_samples/version/v1.4.0/files/classification/byom_voc/byom_classification.ipynb), and MobileNetv3-UNet on the DAGM dataset is shown
+in [this notebok](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/resources/cv_samples/version/v1.4.0/files/unet/byom_dagm/byom_unet_dagm.ipynb).
 
 
 ## List of Tested Models
