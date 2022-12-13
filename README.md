@@ -18,8 +18,8 @@
   - [Semantic Segmentation](notebook/semantic_segmentation/byom_unet_camvid.ipynb)
 - [List of Tested Models](#list-of-tested-models)
 
-## Quick Start Instructions
-To run the reference TAO Toolkit BYOM converter implementations, follow the steps below:
+## Installing the TAO BYOM Converter for TF1 Classification and UNet
+To run the reference TAO Toolkit BYOM converter implementations for TF1 models, follow the steps below:
 
 ### Prerequisites
 
@@ -28,9 +28,9 @@ Before running the examples defined in this repository, install the following it
 | **Component**  | **Version** |
 | :---  | :------ |
 | python |  >=3.6.9 <3.7   |
-| python3-pip | >19.03.5 |
-| nvidia-driver | >455 |
-| nvidia-pyindex| |
+| python3-pip | >21.06  |
+| nvidia-driver | >455  |
+| nvidia-pyindex| >=1.0 |
 
 
 ### Install Python Dependencies
@@ -60,13 +60,78 @@ Before running the examples defined in this repository, install the following it
    pip3 install -r requirements.txt --no-deps
    ```
 
-3. Install TensorFlow.
+3. Install TensorFlow 1.
 
    Before using the NVIDIA TAO BYOM converter, you must install TensorFlow 1.15.x. Use the following commands to install it.
 
    ```sh
    pip3 install nvidia-pyindex
    pip3 install nvidia-tensorflow
+   ```
+
+4. Install the NVIDIA TAO BYOM converter
+
+   The NVIDIA TAO BYOM converter is hosted in the official PyPI repository and can be installed using the following command.
+
+   ```sh
+   pip3 install nvidia-tao-byom
+   ```
+
+5. Check your installation using the following command.
+
+   ```sh
+   tao_byom --help
+   ```
+
+## Installing the TAO BYOM Converter for TF2 Classification
+To run the reference TAO Toolkit BYOM converter implementations for TF1 models, follow the steps below:
+
+### Prerequisites
+
+Before running the examples defined in this repository, install the following items:
+
+| **Component**  | **Version** |
+| :---  | :------ |
+| python |  ==3.8.*  |
+| python3-pip | >21.06  |
+| nvidia-driver | >455  |
+
+
+### Install Python Dependencies
+1. Set up the miniconda using the following instructions:
+
+    You may follow the instructions in this [link](https://docs.conda.io/en/latest/miniconda.html) to set up a Python conda environment using miniconda.
+
+   Once you have followed the instructions to install miniconda, set the Python version
+   in the new conda environment with this command:
+
+    ```sh
+    conda create -n byom_dev python=3.8
+    ```
+
+   Once you have created this conda environemnt, you may reinstantiate it on any terminal session with this command:
+
+   ```sh
+   conda activate byom_dev
+   ```
+
+2. Install python-pip dependencies.
+
+   These repositories relies on several third-party Python dependancies, which you can install to your conda using
+   the following command.
+
+   ```sh
+   pip3 install -r requirements.txt --no-deps
+   ```
+
+3. Install TensorFlow 2.
+
+   Before using the NVIDIA TAO BYOM converter for TF2 classification, you must install Tensorflow 2.9.x package and necessary CUDA related dependencies.
+
+   ```sh
+   conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
+   pip3 install tensorflow==2.9.1
    ```
 
 4. Install the NVIDIA TAO BYOM converter
